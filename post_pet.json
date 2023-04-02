@@ -1,0 +1,110 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "title": "Root Schema",
+    "type": "object",
+    "required": [
+        "id",
+        "category",
+        "name",
+        "photoUrls",
+        "tags",
+        "status"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "title": "The id Schema",
+            "type": "integer",
+            "examples": [
+                334
+            ]
+        },
+        "category": {
+            "title": "The category Schema",
+            "type": "object",
+            "required": [
+                "id",
+                "name"
+            ],
+            "additionalProperties": true,
+            "properties": {
+                "id": {
+                    "title": "The id Schema",
+                    "type": "integer",
+                    "examples": [
+                        556
+                    ]
+                },
+                "name": {
+                    "title": "The name Schema",
+                    "type": "string",
+                    "examples": [
+                        "longdog"
+                    ]
+                }
+            },
+            "examples": []
+        },
+        "name": {
+            "title": "The name Schema",
+            "type": "string",
+            "examples": [
+                "sharky"
+            ]
+        },
+        "photoUrls": {
+            "title": "The photoUrls Schema",
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "title": "A Schema",
+                "type": "string",
+                "examples": [
+                    "some_photo"
+                ]
+            },
+            "examples": []
+        },
+        "tags": {
+            "title": "The tags Schema",
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+                "title": "A Schema",
+                "type": "object",
+                "required": [
+                    "id",
+                    "name"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "id": {
+                        "title": "The id Schema",
+                        "type": "integer",
+                        "examples": [
+                            71
+                        ]
+                    },
+                    "name": {
+                        "title": "The name Schema",
+                        "type": "string",
+                        "examples": [
+                            "some_tag"
+                        ]
+                    }
+                },
+                "examples": []
+            },
+            "examples": []
+        },
+        "status": {
+            "title": "The status Schema",
+            "type": "string",
+            "examples": [
+                "available"
+            ]
+        }
+    },
+    "examples": []
+}
